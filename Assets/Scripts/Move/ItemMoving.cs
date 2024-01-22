@@ -1,26 +1,29 @@
 using UnityEngine;
 
-public class ItemMoving : MonoBehaviour
+namespace Item
 {
-    [Header("ã‰º•‚ğİ’è")]
-    public float sinOffset = 3f;
-    [Header("‰ñ“]‘¬“x‚ğİ’è")]
-    public float rotateSpeed = 1f;
-
-    private float offsetY;
-
-    private void Start()
+    public class ItemMoving : MonoBehaviour
     {
-        offsetY = transform.position.y;
-    }
+        [Header("ã‰º•‚ğİ’è")]
+        public float sinOffset = 3f;
+        [Header("‰ñ“]‘¬“x‚ğİ’è")]
+        public float rotateSpeed = 1f;
 
-    private void Update()
-    {
-        var posY = Mathf.Sin(Time.time) / sinOffset;
-        Vector3 updateVec = transform.position;
-        updateVec.y = offsetY + posY;
-        transform.position = updateVec;
+        private float offsetY;
 
-        transform.Rotate(0f, rotateSpeed, 0f);
+        private void Start()
+        {
+            offsetY = transform.position.y;
+        }
+
+        private void Update()
+        {
+            var posY = Mathf.Sin(Time.time) / sinOffset;
+            Vector3 updateVec = transform.position;
+            updateVec.y = offsetY + posY;
+            transform.position = updateVec;
+
+            transform.Rotate(0f, rotateSpeed, 0f);
+        }
     }
 }
