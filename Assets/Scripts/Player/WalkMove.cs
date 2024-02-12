@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class WalkMove : MonoBehaviour
 {
@@ -24,14 +24,14 @@ public class WalkMove : MonoBehaviour
 
         var blend = Mathf.Max(Mathf.Abs(horizontal), Mathf.Abs(vertical));
         animator.SetFloat("Blend", blend);
-        // ˆê’è’lˆÈã‚Å‚È‚¢‚ÆŒü‚«‚ğ•Ï‚í‚ç‚È‚¢‚æ‚¤‚Éİ’è‚·‚é
+        // ä¸€å®šå€¤ä»¥ä¸Šã§ãªã„ã¨å‘ãã‚’å¤‰ã‚ã‚‰ãªã„ã‚ˆã†ã«è¨­å®šã™ã‚‹
         if (vec.magnitude > 0.05f)
         {
             targetRotate = Quaternion.LookRotation(vec, Vector3.up);
         }
-        // To FromŠÔ‚Ì‰ñ“]‚ğ‚È‚ß‚ç‚©‚É‚·‚é
+        // To Fromé–“ã®å›è»¢ã‚’ãªã‚ã‚‰ã‹ã«ã™ã‚‹
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotate, 600 * Time.fixedDeltaTime);
-        //d—Í‚Ì‰e‹¿‚ğ‚È‚­‚·‚½‚ßŒ³‚ÌVelocity Y‚ğİ’è‚·‚é
+        //é‡åŠ›ã®å½±éŸ¿ã‚’ãªãã™ãŸã‚å…ƒã®Velocity Yã‚’è¨­å®šã™ã‚‹
         vec.y = _rigidbody.velocity.y;
         _rigidbody.velocity = vec;
     }

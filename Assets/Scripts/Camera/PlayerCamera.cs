@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace Camera
 {
@@ -9,7 +9,7 @@ namespace Camera
 
         void LateUpdate()
         {
-            // ¡‚ÌƒvƒŒƒCƒ„[‚ÌˆÊ’u‚Ì‘Š‘ÎˆÊ’u‚ÉƒJƒƒ‰‚ğXV‚·‚é
+            // ä»Šã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ä½ç½®ã®ç›¸å¯¾ä½ç½®ã«ã‚«ãƒ¡ãƒ©ã‚’æ›´æ–°ã™ã‚‹
             Vector3 playerPos = targetObj.transform.position;
             this.transform.position = playerPos + PlayerLookAtPosition;
         }

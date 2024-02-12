@@ -1,12 +1,12 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace Item
 {
     public class ItemMoving : MonoBehaviour
     {
-        [Header("ã‰º•‚ğİ’è")]
+        [Header("ä¸Šä¸‹å¹…ã‚’è¨­å®š")]
         public float sinOffset = 3f;
-        [Header("‰ñ“]‘¬“x‚ğİ’è")]
+        [Header("å›è»¢é€Ÿåº¦ã‚’è¨­å®š")]
         public float rotateSpeed = 1f;
 
         private float offsetY;
